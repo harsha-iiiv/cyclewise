@@ -1,0 +1,17 @@
+{
+  "name": "Cyclewise",
+  "short_name": "Cyclewise",
+  "description": "Manage your period. Own your record.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFBF8",
+  "theme_color": "#8A2846",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
