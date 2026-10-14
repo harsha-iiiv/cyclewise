@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FFFBF8;
+  --surface: #FFFFFF;
+  --surface-2: #F7EFEA;
+  --ink: #2B1B22;
+  --ink-2: #6E5A63;
+  --line: #EBDDD6;
+  --primary: #8A2846;
+  --primary-soft: #F9E3EA;
+  --sage: #4E7A5A;
+  --sage-soft: #E4EFE6;
+  --amber: #B7791F;
+  --amber-soft: #FAF0D7;
+  --red: #B3261E;
+  --red-soft: #FBE7E4;
+  --plum: #5B4A8A;
+  --plum-soft: #ECE8F7;
+}
+
+.dark {
+  --bg: #1C1418;
+  --surface: #261B21;
+  --surface-2: #302428;
+  --ink: #F5ECEF;
+  --ink-2: #B5A0A8;
+  --line: #3D2E33;
+  --primary: #B05070;
+  --primary-soft: #4A2030;
+  --sage: #6A9A7A;
+  --sage-soft: #2A3D2E;
+  --amber: #D49B3F;
+  --amber-soft: #3D3215;
+  --red: #D0453E;
+  --red-soft: #3D1E1B;
+  --plum: #8275B0;
+  --plum-soft: #2E2845;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', Georgia, serif;
+  line-height: 1.2;
+}
+
+/* Focus visibility */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Scrollbar hide for cleaner mobile feel */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Min tap target */
+button, a {
+  min-height: 44px;
+}
+
+/* Smooth transitions on theme change */
+body, .theme-transition {
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 200ms ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 200ms ease forwards;
+}
